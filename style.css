@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fce4ec;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.bouquet {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.envelope {
+    position: relative;
+    width: 180px;
+    height: 140px;
+    background-color: #ffccbc;
+    border: 2px solid #d84315;
+    cursor: pointer;
+}
+
+.top-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #ffab91;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+.letter {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #d84315;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.letter p {
+    margin: 0;
+    font-size: 14px;
+    color: #d84315;
+}
+
+.envelope.open .top-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    opacity: 1;
+}
